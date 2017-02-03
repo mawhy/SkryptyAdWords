@@ -38,6 +38,7 @@
  */
 
 var SPREADSHEET_URL = 'YOUR_SPREADSHEET_URL';
+// based on https://docs.google.com/spreadsheets/d/1vzYLp2M2xvCkCgf0gs84GDJW7Fd2GEQZuwQkyqk4Z_c/edit#gid=3
 
 /**
  * Configuration to be used for running reports.
