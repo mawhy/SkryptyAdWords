@@ -1,0 +1,33 @@
+
+<script>
+var Render = (function (render) {
+//Visualization API | 297
+ render.build = function () {
+ // the chart element is already in place
+ var chartElem = document.getElementById ("chart");
+ // Create a data table.
+ var table = new google.visualization.DataTable();
+ // get a copy of the data (top 10, first two columns) and the headings
+ var heads = App.globals.data[0].slice();
+ var rows = App.globals.data.slice(1,11).map(function(d) {
+ return d.slice(0,2);
+ });
+ // add the headings
+ table.addColumn('string', heads[0]);
+ table.addColumn('number', heads[1]);
+ // add the data
+ table.addRows (rows);
+ // Set chart options
+ var options = {
+ 'title':'Domestic US Passenger volumes 2014',
+ 'width':280,
+ 'height':220
+ };
+ // show the chart
+ var chart = new google.visualization.BarChart(chartElem);
+ chart.draw(table, options);
+ };
+ return render;
+})(Render || {});
+</script>
+

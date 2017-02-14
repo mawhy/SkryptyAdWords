@@ -1,0 +1,18 @@
+<script>
+// the app
+google.load('visualization', '1.0', {'packages':['corechart']});
+//Visualization API | 295
+// wait for the viz lib to have loaded
+google.setOnLoadCallback (function () {
+ // kick by getting data, and building page
+ Client.getData (function (data) {
+ // store the data
+ App.globals.data = data;
+ // render the chart
+ Render.build();
+ // add any listeners
+ App.listeners();
+ });
+});
+</script>
+
